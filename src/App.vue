@@ -11,7 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="This is a portfolio" />
+  <HelloWorld msg="This is a portfolio with another change for testing deployment" />
 </template>
 
 <style scoped>
