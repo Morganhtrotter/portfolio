@@ -19,9 +19,13 @@ const navButtonOpacity = ref('0'); // Default to hidden
 // Similar state to track the visibility of nav buttons
 const navButtonVisibility = ref('hidden'); // Default to hidden
 
+// State for mobile flyout menu visibility
+const isFlyoutVisible = ref(false); // Default to hidden
+
 // Function to change the active section
 const showSection = (section) => {
   activeSection.value = section;
+  isFlyoutVisible.value = false; // Close flyout menu when a section is selected
 };
 
 // Function to decrease the width of the app
@@ -40,6 +44,11 @@ const increaseAppWidth = () => {
   navWidth.value = '0%'; // Hide the navigation menu
   navButtonOpacity.value = '0'; // Hide nav buttons
   navButtonVisibility.value = 'hidden'; // Make nav buttons hidden
+};
+
+// Function to toggle the flyout menu
+const toggleFlyoutMenu = () => {
+  isFlyoutVisible.value = !isFlyoutVisible.value;
 };
 </script>
 
@@ -80,6 +89,10 @@ const increaseAppWidth = () => {
               close
             </span>
           </div>
+          <!-- Hamburger Menu for Mobile -->
+          <div class="hamburger-menu" @click="toggleFlyoutMenu">
+            <span class="material-symbols-outlined">menu</span>
+          </div>
         </div>
       </header>
     </div>
@@ -91,6 +104,15 @@ const increaseAppWidth = () => {
         <li><button @click="showSection('contact')">Contact</button></li>
       </ul>
     </nav>
+    <!-- Flyout Menu -->
+    <div class="flyout-menu" v-if="isFlyoutVisible">
+      <ul>
+        <li><button @click="showSection('header')">Home</button></li>
+        <li><button @click="showSection('about')">About</button></li>
+        <li><button @click="showSection('projects')">Projects</button></li>
+        <li><button @click="showSection('contact')">Contact</button></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -192,6 +214,51 @@ ul {
   flex-direction: column;
 }
 
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.75rem;
+  z-index: 1000;
+}
+
+.flyout-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.flyout-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flyout-menu li {
+  margin-bottom: 1rem;
+}
+
+.flyout-menu button {
+  background: none;
+  border: none;
+  color: #010101;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Roboto Condensed", monospace;
+  font-size: 1.2rem;
+}
+
 @media screen and (max-width: 48rem) {
   h1 {
     font-size: 2.5rem;
@@ -211,6 +278,14 @@ ul {
   .app-wrapper {
     border: 1.5px solid #010101;
     min-height: calc(100vh - 2rem);
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  nav ul, .next-page, .hide-page {
+    display: none;
   }
 }
 </style>
