@@ -55,12 +55,12 @@ const increaseAppWidth = () => {
         <div class="next-page-wrapper">
           <div v-if="appWidth === '100%'" class="next-page" @click="decreaseAppWidth">
             <span class="material-symbols-outlined open">
-              double_arrow
+              menu
             </span>
           </div>
           <div v-if="appWidth === '90%'" class="hide-page" @click="increaseAppWidth">
             <span class="material-symbols-outlined close">
-              double_arrow
+              close
             </span>
           </div>
         </div>
