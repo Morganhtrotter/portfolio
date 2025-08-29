@@ -47,11 +47,28 @@ const increaseAppWidth = () => {
   <div class="app-background">
     <div class="app-wrapper" :style="{ width: appWidth }">
       <!-- Header -->
-      <header class="header-outline" v-if="activeSection === 'header'">
-        <div class="header-wrapper">
+      <header class="header-outline">
+        <div class="header-wrapper" v-if="activeSection === 'header'">
           <h1>Morgan Trotter</h1>
           <h2>Web Developer & Designer</h2>
         </div>
+        <!-- About Section -->
+        <main v-if="activeSection === 'about'">
+          <About />
+          <button @click="showSection('header')">Back to Home</button>
+        </main>
+
+        <!-- Projects Section -->
+        <main v-if="activeSection === 'projects'">
+          <Projects />
+          <button @click="showSection('header')">Back to Home</button>
+        </main>
+
+        <!-- Contact Section -->
+        <main v-if="activeSection === 'contact'">
+          <Contact />
+          <button @click="showSection('header')">Back to Home</button>
+        </main>
         <div class="next-page-wrapper">
           <div v-if="appWidth === '100%'" class="next-page" @click="decreaseAppWidth">
             <span class="material-symbols-outlined open">
@@ -65,24 +82,6 @@ const increaseAppWidth = () => {
           </div>
         </div>
       </header>
-
-      <!-- About Section -->
-      <main v-if="activeSection === 'about'">
-        <About />
-        <button @click="showSection('header')">Back to Home</button>
-      </main>
-
-      <!-- Projects Section -->
-      <main v-if="activeSection === 'projects'">
-        <Projects />
-        <button @click="showSection('header')">Back to Home</button>
-      </main>
-
-      <!-- Contact Section -->
-      <main v-if="activeSection === 'contact'">
-        <Contact />
-        <button @click="showSection('header')">Back to Home</button>
-      </main>
     </div>
     <nav :style="{ width: navWidth }">
       <ul :style="{ opacity: navButtonOpacity, visibility: navButtonVisibility }">
@@ -107,7 +106,7 @@ nav ul {
   justify-content: center;
   gap: 1em;
   margin-left: auto;
-  transition: opacity 0.9s ease-in-out 0.2s; 
+  transition: opacity 0.9s ease-in-out 0.6s; 
 }
 
 nav {
