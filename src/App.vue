@@ -85,6 +85,7 @@ const increaseAppWidth = () => {
     </div>
     <nav :style="{ width: navWidth }">
       <ul :style="{ opacity: navButtonOpacity, visibility: navButtonVisibility }">
+        <li><button @click="showSection('header')">Home</button></li>
         <li><button @click="showSection('about')">About</button></li>
         <li><button @click="showSection('projects')">Projects</button></li>
         <li><button @click="showSection('contact')">Contact</button></li>
@@ -125,6 +126,16 @@ nav button {
   font-weight: bold;
   cursor: pointer;
   padding-right: 0;
+  font-family: "Roboto Condensed", monospace;
+  font-weight: 500;
+}
+
+nav button:focus {
+  outline: none;
+}
+
+nav button:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -144,15 +155,17 @@ h1, h2 {
 }
 
 h1 {
-  font-family: "Red Hat Mono", monospace;
+  font-family: "Big Shoulders", monospace;
   text-transform: uppercase;
+  font-size: 4.25rem;
   font-weight: 200;
-  letter-spacing: 0.25rem;
+  letter-spacing: 1rem;
 }
 
 h2 {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 500;
+  font-family: "Roboto Condensed", monospace;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 
 .app-wrapper {
@@ -177,5 +190,27 @@ h2 {
 ul {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 48rem) {
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+  }
+
+  nav ul, .next-page, .hide-page {
+    display: none;
+  }
+
+  .app-wrapper {
+    border: 1.5px solid #010101;
+    min-height: calc(100vh - 2rem);
+  }
 }
 </style>
