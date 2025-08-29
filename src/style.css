@@ -38,6 +38,22 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-family: "Big Shoulders", monospace;
+  text-transform: uppercase;
+  font-size: 4.25rem;
+  font-weight: 200;
+  letter-spacing: 1rem;
+}
+
+h2 {
+  font-family: "Roboto Condensed", monospace;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+h1, h2 {
+  margin: 0;
+  color: #010101;
 }
 
 button {
@@ -89,11 +105,6 @@ button:focus-visible {
   transform: rotate(180deg);
 }
 
-.material-symbols-outlined:hover {
-  color: #646cff;
-  cursor: pointer;
-}
-
 .next-page-wrapper {
   margin: auto 0 auto auto;
   height: 100%;
@@ -102,6 +113,15 @@ button:focus-visible {
   padding-right: 1rem;
 }
 
+/* Desktop only */
+@media screen and (min-width: 48rem) {
+  .material-symbols-outlined:hover {
+    color: #646cff;
+    cursor: pointer;
+  }
+}
+
+/* Mobile only */
 @media screen and (max-width: 48rem) {
   #app {
     padding: 1rem;
@@ -110,6 +130,17 @@ button:focus-visible {
 
   .header-wrapper {
     padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
   }
 }
 

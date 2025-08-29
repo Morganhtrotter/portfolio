@@ -60,23 +60,21 @@ const toggleFlyoutMenu = () => {
         <div class="header-wrapper" v-if="activeSection === 'header'">
           <h1>Morgan Trotter</h1>
           <h2>Web Developer & Designer</h2>
+          <p>Front-End Developer with 4+ years of experience building and optimizing responsive, user-focused web applications for enterprise brands like Williams Sonoma. Skilled in Vue.js, D3.js, and modern JavaScript tooling, with a strong background in UI/UX collaboration, testing, and performance optimization.</p>
         </div>
         <!-- About Section -->
         <main v-if="activeSection === 'about'">
           <About />
-          <button @click="showSection('header')">Back to Home</button>
         </main>
 
         <!-- Projects Section -->
         <main v-if="activeSection === 'projects'">
           <Projects />
-          <button @click="showSection('header')">Back to Home</button>
         </main>
 
         <!-- Contact Section -->
         <main v-if="activeSection === 'contact'">
           <Contact />
-          <button @click="showSection('header')">Back to Home</button>
         </main>
         <div class="next-page-wrapper">
           <div v-if="appWidth === '100%'" class="next-page" @click="decreaseAppWidth">
@@ -90,7 +88,7 @@ const toggleFlyoutMenu = () => {
             </span>
           </div>
           <!-- Hamburger Menu for Mobile -->
-          <div class="hamburger-menu" @click="toggleFlyoutMenu">
+          <div class="hamburger-menu" :class="{ 'active': isFlyoutVisible }" @click="toggleFlyoutMenu">
             <span class="material-symbols-outlined">menu</span>
           </div>
         </div>
@@ -171,31 +169,13 @@ footer {
   color: #888;
 }
 
-h1, h2 {
-  margin: 0;
-  color: #010101;
-}
-
-h1 {
-  font-family: "Big Shoulders", monospace;
-  text-transform: uppercase;
-  font-size: 4.25rem;
-  font-weight: 200;
-  letter-spacing: 1rem;
-}
-
-h2 {
-  font-family: "Roboto Condensed", monospace;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-}
-
 .app-wrapper {
   border: 1.5px solid #010101;
   border-radius: 3px;
   height: auto;
   min-height: calc(100vh - 4rem);
   transition: width 0.8s ease-in-out;
+  max-height: calc(100vh - 4rem);
 }
 
 .app-background {
@@ -224,25 +204,32 @@ ul {
   z-index: 1000;
 }
 
+.hamburger-menu.active .material-symbols-outlined {
+  color: #fff;
+}
+
 .flyout-menu {
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 70%;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  top: 1rem;
+  right: 1rem;
+  width: 40%;
+  height: calc(100vh - 30px);
+  background-color: #010101;
   z-index: 999;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 0;
   transition: transform 0.3s ease-in-out;
+  box-shadow: -10px 0 15px -10px rgba(0, 0, 0, 0.8);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .flyout-menu ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 3rem 0 0;
+  text-align: right;
 }
 
 .flyout-menu li {
@@ -252,25 +239,36 @@ ul {
 .flyout-menu button {
   background: none;
   border: none;
-  color: #010101;
+  color: #fff;
   font-weight: bold;
   cursor: pointer;
   font-family: "Roboto Condensed", monospace;
   font-size: 1.2rem;
+  padding-right: 1rem;
+}
+
+.header-wrapper {
+  width: -webkit-fill-available;
+}
+
+.header-wrapper p {
+  margin: auto 0 0 auto;
+  color: #010101;
+  text-align: right;
+  font-family: "Roboto Condensed", monospace;
+  font-weight: 400;
+  font-size: 1.375rem;
+  width: 25rem;
+  margin-right: -2.5rem;
+}
+
+main {
+  padding: 2rem;
+  text-align: left;
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 48rem) {
-  h1 {
-    font-size: 2.5rem;
-    letter-spacing: 0.5rem;
-    text-align: left;
-  }
-
-  h2 {
-    font-size: 1rem;
-    letter-spacing: 0.05rem;
-  }
-
   nav ul, .next-page, .hide-page {
     display: none;
   }
@@ -278,6 +276,7 @@ ul {
   .app-wrapper {
     border: 1.5px solid #010101;
     min-height: calc(100vh - 2rem);
+    max-height: calc(100vh - 2rem);
   }
 
   .hamburger-menu {
@@ -286,6 +285,16 @@ ul {
 
   nav ul, .next-page, .hide-page {
     display: none;
+  }
+
+  .header-wrapper p {
+    font-size: 1rem;
+    width: 12.5rem;
+    margin-right: -1rem;
+  }
+
+  main {
+    padding: 1rem;
   }
 }
 </style>
