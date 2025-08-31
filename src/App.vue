@@ -158,10 +158,6 @@ nav button:hover {
   text-decoration: underline;
 }
 
-main {
-  padding: 0 2em;
-}
-
 footer {
   text-align: center;
   margin-top: 2em;
@@ -266,6 +262,10 @@ main {
   padding: 2rem;
   text-align: left;
   overflow-y: scroll;
+}
+
+main::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (max-width: 48rem) {

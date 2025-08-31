@@ -111,6 +111,19 @@ button:focus-visible {
   padding-right: 1rem;
 }
 
+p {
+  color: #010101;
+  font-family: "Roboto Condensed", monospace;
+  font-weight: 400;
+  font-size: 1.125rem;
+  text-align: left;
+}
+
+.line-break {
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5px solid #010101;
+}
+
 /* Desktop only */
 @media screen and (min-width: 48rem) {
   .material-symbols-outlined:hover {

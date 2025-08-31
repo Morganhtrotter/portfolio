@@ -2,7 +2,9 @@
     <section id="projects">
       <h1>Projects</h1>
       <h3>Tenco CityScale K Line Intersection Delays For Inbound K Line</h3>
-      <img src="../assets/K_Line_Inbound.png" alt="K Line Inbound Visual" style="width:250px;height:180px;">
+      <div class="linear-gradient">
+        <img src="../assets/K_Line_Inbound.png" alt="K Line Inbound Visual" style="width:250px;height:180px;"></img>
+      </div>
       <a href="https://mtrotterte.github.io/line-graph-sfmta/" target="_blank">View Project</a>
       <a href="https://github.com/MtrotterTE/line-graph-sfmta">GitHub</a>
       <h4>Overview</h4>
@@ -52,7 +54,9 @@
       </ol>
       <div class="line-break"></div>
       <h3>Climate Change Data Visualization Project</h3>
-      <img src="../assets/CO2_visual.png" alt="CO2 Emissions Visual" style="width:250px;height:180px;">
+      <div class="linear-gradient">
+        <img src="../assets/CO2_visual.png" alt="CO2 Emissions Visual" style="width:250px;height:180px;">
+      </div>
       <a href="https://morganhtrotter.github.io/co2page/" target="_blank">View Project</a>
       <a href="https://github.com/Morganhtrotter/co2page">GitHub</a>
       <h4>Overview</h4>
@@ -146,11 +150,6 @@
     margin: 0;
   }
 
-  .line-break {
-    padding-bottom: 1.5rem;
-    border-bottom: 1.5px solid #010101;
-  }
-
   img {
     width: 100% !important;
     height: 300px !important;
@@ -159,5 +158,20 @@
 
   a {
     padding-right: 0.5rem;
+    text-decoration: underline;
+    padding-top: 0.5rem;
+  }
+
+  .linear-gradient {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    border-radius: 3px;
+    border: 1.5px solid #010101;
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .linear-gradient img {
+    position: relative;
+    z-index: -1;
   }
   </style>
