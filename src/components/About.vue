@@ -21,6 +21,6 @@
     font-weight: 400;
     font-size: 1.125rem;
     text-align: left;
-    max-width: 600px;
+    max-width: 37.5rem;
   }
   </style>

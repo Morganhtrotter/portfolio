@@ -59,7 +59,7 @@ const toggleFlyoutMenu = () => {
       <header class="header-outline">
         <div class="header-wrapper" v-if="activeSection === 'header'">
           <h1>Morgan Trotter</h1>
-          <h2>Web Developer & Designer</h2>
+          <h2>Front End Developer & Designer</h2>
           <p>Front-End Developer with 4+ years of experience building and optimizing responsive, user-focused web applications for enterprise brands like Williams Sonoma. Skilled in Vue.js, D3.js, and modern JavaScript tooling, with a strong background in UI/UX collaboration, testing, and performance optimization.</p>
         </div>
         <!-- About Section -->
