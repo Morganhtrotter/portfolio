@@ -14,10 +14,6 @@
   background-size: cover;
   background-attachment: fixed;
 
-  @media screen and (max-width: 48rem) {
-    background-image: url('./assets/mobileBackground.png');
-  }
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -163,6 +159,7 @@ p {
   :root {
     color: #213547;
     background-color: #ffffff;
+    background-image: url('./assets/mobileBackground.png');
   }
   a:hover {
     color: #747bff;

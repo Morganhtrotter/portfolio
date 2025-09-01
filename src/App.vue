@@ -200,25 +200,22 @@ ul {
   z-index: 1000;
 }
 
-.hamburger-menu.active .material-symbols-outlined {
-  color: #fff;
-}
-
 .flyout-menu {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 17.5px;
+  right: 17.5px;
   width: 40%;
-  height: calc(100vh - 30px);
-  background-color: #010101;
+  height: calc(100vh - 32px);
+  background-color: #f1f1f1;
   z-index: 999;
   display: flex;
   flex-direction: column;
   padding: 0;
   transition: transform 0.3s ease-in-out;
-  box-shadow: -10px 0 15px -10px rgba(0, 0, 0, 0.8);
+  box-shadow: -10px 0 15px -10px rgba(0, 0, 0, 0.3);
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  border-left: 1.5px solid #010101;
 }
 
 .flyout-menu ul {
@@ -235,11 +232,11 @@ ul {
 .flyout-menu button {
   background: none;
   border: none;
-  color: #fff;
-  font-weight: bold;
+  color: #010101;
+  font-weight: 500;
   cursor: pointer;
   font-family: "Roboto Condensed", monospace;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-right: 1rem;
 }
 
