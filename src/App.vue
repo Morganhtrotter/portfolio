@@ -100,6 +100,7 @@ const toggleFlyoutMenu = () => {
         <li><button @click="showSection('about')">About</button></li>
         <li><button @click="showSection('projects')">Projects</button></li>
         <li><button @click="showSection('contact')">Contact</button></li>
+        <li><a href="/resume.pdf" target="_blank" class="btn">Resume</a></li>
       </ul>
     </nav>
     <!-- Flyout Menu -->
@@ -109,6 +110,7 @@ const toggleFlyoutMenu = () => {
         <li><button @click="showSection('about')">About</button></li>
         <li><button @click="showSection('projects')">Projects</button></li>
         <li><button @click="showSection('contact')">Contact</button></li>
+        <li><a href="/resume.pdf" target="_blank" class="btn">Resume</a></li>
       </ul>
     </div>
   </div>
@@ -139,7 +141,7 @@ nav ul li {
   margin-left: auto;
 }
 
-nav button {
+nav button, nav .btn {
   background: none;
   border: none;
   color: #010101;
@@ -150,11 +152,11 @@ nav button {
   font-weight: 500;
 }
 
-nav button:focus {
+nav button:focus, nav .btn {
   outline: none;
 }
 
-nav button:hover {
+nav button:hover, nav .btn:hover {
   text-decoration: underline;
 }
 

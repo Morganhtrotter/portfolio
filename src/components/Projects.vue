@@ -1,7 +1,10 @@
 <template>
     <section id="projects">
       <h1>Projects</h1>
-      <h3>Tenco CityScale K Line Intersection Delays For Inbound K Line</h3>
+      <div class="project-header-wrapper">
+        <h3>Tenco CityScale K Line Intersection Delays For Inbound K Line</h3>
+        <h5>Freelance</h5>
+      </div>
       <div class="linear-gradient">
         <img src="../assets/K_Line_Inbound.png" alt="K Line Inbound Visual" style="width:250px;height:180px;"></img>
       </div>
@@ -53,7 +56,10 @@
         </li>
       </ol>
       <div class="line-break"></div>
-      <h3>Climate Change Data Visualization Project</h3>
+      <div class="project-header-wrapper">
+        <h3>Climate Change Data Visualization Project</h3>
+        <h5>UCSC Capstone Course</h5>
+      </div>
       <div class="linear-gradient">
         <img src="../assets/CO2_visual.png" alt="CO2 Emissions Visual" style="width:250px;height:180px;">
       </div>
@@ -125,7 +131,7 @@
     margin-bottom: 2em;
   }
 
-  h3, p, li, h4 {
+  h3, p, li, h4, h5 {
     color: #010101;
     font-family: "Roboto Condensed", monospace;
   }
@@ -134,7 +140,7 @@
     color: #010101;
   }
 
-  h3 {
+  h3, h5 {
     font-weight: 500;
     font-size: 1.5rem;
     margin-top: 1.5rem;
@@ -163,9 +169,8 @@
   }
 
   .linear-gradient {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
     border-radius: 3px;
-    border: 1.5px solid #010101;
+    border: 1.5px solid lightgray;
     height: 300px;
     margin-bottom: 1rem;
   }
@@ -173,5 +178,11 @@
   .linear-gradient img {
     position: relative;
     z-index: -1;
+  }
+
+  .project-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   </style>
