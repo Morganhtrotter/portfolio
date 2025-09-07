@@ -231,7 +231,7 @@ ul {
   margin-bottom: 1rem;
 }
 
-.flyout-menu button {
+.flyout-menu button, .flyout-menu .btn {
   background: none;
   border: none;
   color: #010101;
