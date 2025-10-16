@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Megrim&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
+  --bg-lqip: url('./assets/background-lqip.jpg');
+  --bg-full: url('./assets/image0.png');
+  --bg-size: cover;
+  --bg-position: center;
+  --bg-repeat: no-repeat;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -8,16 +14,20 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #f3f6f8;
-  background-image: url('./assets/image0.png');
-  background-repeat: no-repeat;
-  background-position: center; /* Centers the image if there's empty space */
-  background-size: cover;
+  background-image: var(--bg-lqip);
+  background-size: var(--bg-size);
+  background-position: var(--bg-position);
+  background-repeat: var(--bg-repeat);
   background-attachment: fixed;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root.loaded {
+  background-image: var(--bg-full);
 }
 
 a {
