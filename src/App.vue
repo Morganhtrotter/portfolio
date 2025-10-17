@@ -1,66 +1,77 @@
 <script setup>
-import { ref } from 'vue';
-import About from './components/About.vue';
-import Projects from './components/Projects.vue';
-import Contact from './components/Contact.vue';
+import { ref } from 'vue'
+import About from './components/About.vue'
+import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
 
 // State to track the currently active section
-const activeSection = ref('header'); // Default to 'header'
+const activeSection = ref('header') // Default to 'header'
 
 // State to track the width of the app
-const appWidth = ref('100%'); // Default width
+const appWidth = ref('100%') // Default width
 
 // State to track the visibility of the navigation menu
-const navWidth = ref('0%'); // Default to hidden
+const navWidth = ref('0%') // Default to hidden
 
 // State to show and hide nav buttons
-const navButtonOpacity = ref('0'); // Default to hidden
+const navButtonOpacity = ref('0') // Default to hidden
 
 // Similar state to track the visibility of nav buttons
-const navButtonVisibility = ref('hidden'); // Default to hidden
+const navButtonVisibility = ref('hidden') // Default to hidden
 
 // State for mobile flyout menu visibility
-const isFlyoutVisible = ref(false); // Default to hidden
+const isFlyoutVisible = ref(false) // Default to hidden
 
 // Function to change the active section
 const showSection = (section) => {
-  activeSection.value = section;
-  isFlyoutVisible.value = false; // Close flyout menu when a section is selected
-};
+  activeSection.value = section
+  isFlyoutVisible.value = false // Close flyout menu when a section is selected
+}
 
 // Function to decrease the width of the app
 const decreaseAppWidth = () => {
-  const currentWidth = parseInt(appWidth.value);
-  appWidth.value = `${currentWidth - 10}%`;
-  navWidth.value = '10%'; // Show the navigation menu
-  navButtonOpacity.value = '1'; // Show nav buttons
-  navButtonVisibility.value = 'visible'; // Make nav buttons visible
-};
+  const currentWidth = parseInt(appWidth.value)
+  appWidth.value = `${currentWidth - 10}%`
+  navWidth.value = '10%' // Show the navigation menu
+  navButtonOpacity.value = '1' // Show nav buttons
+  navButtonVisibility.value = 'visible' // Make nav buttons visible
+}
 
 // Function to increase the width of the app
 const increaseAppWidth = () => {
-  const currentWidth = parseInt(appWidth.value);
-  appWidth.value = `${currentWidth + 10}%`;
-  navWidth.value = '0%'; // Hide the navigation menu
-  navButtonOpacity.value = '0'; // Hide nav buttons
-  navButtonVisibility.value = 'hidden'; // Make nav buttons hidden
-};
+  const currentWidth = parseInt(appWidth.value)
+  appWidth.value = `${currentWidth + 10}%`
+  navWidth.value = '0%' // Hide the navigation menu
+  navButtonOpacity.value = '0' // Hide nav buttons
+  navButtonVisibility.value = 'hidden' // Make nav buttons hidden
+}
 
 // Function to toggle the flyout menu
 const toggleFlyoutMenu = () => {
-  isFlyoutVisible.value = !isFlyoutVisible.value;
-};
+  isFlyoutVisible.value = !isFlyoutVisible.value
+}
 </script>
 
 <template>
   <div class="app-background">
-    <div class="app-wrapper" :style="{ width: appWidth }">
+    <div
+      class="app-wrapper"
+      :style="{ width: appWidth }"
+    >
       <!-- Header -->
       <header class="header-outline">
-        <div class="header-wrapper" v-if="activeSection === 'header'">
+        <div
+          v-if="activeSection === 'header'"
+          class="header-wrapper"
+        >
           <h1>Morgan Trotter</h1>
           <h2>Front End Developer & Designer</h2>
-          <p>Front-End Developer with 4+ years of experience building and optimizing responsive, user-focused web applications for enterprise brands like Williams Sonoma. Skilled in Vue.js, D3.js, and modern JavaScript tooling, with a strong background in UI/UX collaboration, testing, and performance optimization.</p>
+          <p>
+            Front-End Developer with 4+ years of experience building and optimizing responsive,
+            user-focused web applications for enterprise brands like Williams Sonoma. Skilled in
+            Vue.js, D3.js, and modern JavaScript tooling, with a strong background in UI/UX
+            collaboration, testing, and performance optimization.
+          </p>
         </div>
         <!-- About Section -->
         <main v-if="activeSection === 'about'">
@@ -77,18 +88,26 @@ const toggleFlyoutMenu = () => {
           <Contact />
         </main>
         <div class="next-page-wrapper">
-          <div v-if="appWidth === '100%'" class="next-page" @click="decreaseAppWidth">
-            <span class="material-symbols-outlined open">
-              menu
-            </span>
+          <div
+            v-if="appWidth === '100%'"
+            class="next-page"
+            @click="decreaseAppWidth"
+          >
+            <span class="material-symbols-outlined open"> menu </span>
           </div>
-          <div v-if="appWidth === '90%'" class="hide-page" @click="increaseAppWidth">
-            <span class="material-symbols-outlined close">
-              close
-            </span>
+          <div
+            v-if="appWidth === '90%'"
+            class="hide-page"
+            @click="increaseAppWidth"
+          >
+            <span class="material-symbols-outlined close"> close </span>
           </div>
           <!-- Hamburger Menu for Mobile -->
-          <div class="hamburger-menu" :class="{ 'active': isFlyoutVisible }" @click="toggleFlyoutMenu">
+          <div
+            class="hamburger-menu"
+            :class="{ active: isFlyoutVisible }"
+            @click="toggleFlyoutMenu"
+          >
             <span class="material-symbols-outlined">menu</span>
           </div>
         </div>
@@ -96,21 +115,68 @@ const toggleFlyoutMenu = () => {
     </div>
     <nav :style="{ width: navWidth }">
       <ul :style="{ opacity: navButtonOpacity, visibility: navButtonVisibility }">
-        <li><button @click="showSection('header')">Home</button></li>
-        <li><button @click="showSection('about')">About</button></li>
-        <li><button @click="showSection('projects')">Projects</button></li>
-        <li><button @click="showSection('contact')">Contact</button></li>
-        <li><a href="/resume.pdf" target="_blank" class="btn">Resume</a></li>
+        <li>
+          <button @click="showSection('header')">
+            Home
+          </button>
+        </li>
+        <li>
+          <button @click="showSection('about')">
+            About
+          </button>
+        </li>
+        <li>
+          <button @click="showSection('projects')">
+            Projects
+          </button>
+        </li>
+        <li>
+          <button @click="showSection('contact')">
+            Contact
+          </button>
+        </li>
+        <li>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            class="btn"
+          >Resume</a>
+        </li>
       </ul>
     </nav>
     <!-- Flyout Menu -->
-    <div class="flyout-menu" v-if="isFlyoutVisible">
+    <div
+      v-if="isFlyoutVisible"
+      class="flyout-menu"
+    >
       <ul>
-        <li><button @click="showSection('header')">Home</button></li>
-        <li><button @click="showSection('about')">About</button></li>
-        <li><button @click="showSection('projects')">Projects</button></li>
-        <li><button @click="showSection('contact')">Contact</button></li>
-        <li><a href="/resume.pdf" target="_blank" class="btn">Resume</a></li>
+        <li>
+          <button @click="showSection('header')">
+            Home
+          </button>
+        </li>
+        <li>
+          <button @click="showSection('about')">
+            About
+          </button>
+        </li>
+        <li>
+          <button @click="showSection('projects')">
+            Projects
+          </button>
+        </li>
+        <li>
+          <button @click="showSection('contact')">
+            Contact
+          </button>
+        </li>
+        <li>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            class="btn"
+          >Resume</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -129,7 +195,7 @@ nav ul {
   justify-content: center;
   gap: 1em;
   margin-left: auto;
-  transition: opacity 0.9s ease-in-out 0.6s; 
+  transition: opacity 0.9s ease-in-out 0.6s;
 }
 
 nav {
@@ -141,22 +207,25 @@ nav ul li {
   margin-left: auto;
 }
 
-nav button, nav .btn {
+nav button,
+nav .btn {
   background: none;
   border: none;
   color: #010101;
   font-weight: bold;
   cursor: pointer;
   padding-right: 0;
-  font-family: "Roboto Condensed", monospace;
+  font-family: 'Roboto Condensed', monospace;
   font-weight: 500;
 }
 
-nav button:focus, nav .btn {
+nav button:focus,
+nav .btn {
   outline: none;
 }
 
-nav button:hover, nav .btn:hover {
+nav button:hover,
+nav .btn:hover {
   text-decoration: underline;
 }
 
@@ -231,13 +300,14 @@ ul {
   margin-bottom: 1rem;
 }
 
-.flyout-menu button, .flyout-menu .btn {
+.flyout-menu button,
+.flyout-menu .btn {
   background: none;
   border: none;
   color: #010101;
   font-weight: 500;
   cursor: pointer;
-  font-family: "Roboto Condensed", monospace;
+  font-family: 'Roboto Condensed', monospace;
   font-size: 1rem;
   padding-right: 1rem;
 }
@@ -250,7 +320,7 @@ ul {
   margin: auto 0 0 auto;
   color: #010101;
   text-align: right;
-  font-family: "Roboto Condensed", monospace;
+  font-family: 'Roboto Condensed', monospace;
   font-weight: 400;
   font-size: 1.375rem;
   width: 25rem;
@@ -268,7 +338,9 @@ main::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 48rem) {
-  nav ul, .next-page, .hide-page {
+  nav ul,
+  .next-page,
+  .hide-page {
     display: none;
   }
 
@@ -282,7 +354,9 @@ main::-webkit-scrollbar {
     display: block;
   }
 
-  nav ul, .next-page, .hide-page {
+  nav ul,
+  .next-page,
+  .hide-page {
     display: none;
   }
 
