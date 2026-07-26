@@ -1,18 +1,26 @@
 <template>
-  <section id="contact">
-    <h1>Contact</h1>
-    <p>
-      I welcome opportunities to connect with recruiters, hiring managers, and teams looking for an
-      experienced Front End Web Developer with expertise in Vue.js, JavaScript, D3.js, and modern
-      web technologies. Whether you are seeking a developer to enhance your front end architecture,
-      build interactive data visualizations, or deliver high-quality user experiences, I'd love to
-      hear from you.
-    </p>
-    <ul>
-      <li>Email: <a href="mailto:morganhtrotter@gmail.com">morganhtrotter@gmail.com</a></li>
-      <li>Phone: (415) 827-5549</li>
+  <section
+    id="contact"
+    class="section contact"
+  >
+    <div class="contact-head">
+      <h2>Contact</h2>
+      <p class="intro">
+        Open to freelance, contract, and full-time front-end roles — especially ones involving data.
+      </p>
+    </div>
+
+    <a
+      href="mailto:morganhtrotter@gmail.com"
+      class="primary-cta"
+    >
+      morganhtrotter@gmail.com
+      <span>→</span>
+    </a>
+
+    <ul class="secondary">
+      <li><a href="tel:+14158275549">(415) 827-5549</a></li>
       <li>
-        LinkedIn:
         <a
           href="https://www.linkedin.com/in/morgan-trotter-15704216a/"
           target="_blank"
@@ -20,7 +28,6 @@
         >LinkedIn</a>
       </li>
       <li>
-        GitHub:
         <a
           href="https://github.com/Morganhtrotter"
           target="_blank"
@@ -28,31 +35,87 @@
         >GitHub</a>
       </li>
     </ul>
-    <p>
-      I aim to respond quickly to inquiries and am open to freelance, contract, and full-time
-      opportunities.
-    </p>
+
+    <div class="footer-row">
+      <span>Morgan Trotter — San Francisco, CA</span>
+      <span>Vue 3 + Vite</span>
+    </div>
   </section>
 </template>
 
 <script setup></script>
 
 <style scoped>
-section {
-  margin-bottom: 2em;
+.contact {
+  border-top: 1px solid var(--line);
+  padding-top: clamp(2rem, 5vw, 3rem);
+  padding-bottom: clamp(2rem, 5vw, 3rem);
 }
 
-ul {
-  list-style-type: none;
+.contact-head {
+  margin-bottom: 2rem;
+}
+
+.contact-head h2 {
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.contact-head .intro {
+  font-family: var(--font-body);
+  color: var(--muted);
+  font-size: 0.98rem;
+  max-width: 46ch;
+  margin-top: 0.6rem;
+}
+
+.primary-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: var(--ink);
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.primary-cta span {
+  color: var(--accent);
+  transition: transform 0.15s ease;
+}
+
+.primary-cta:hover span {
+  transform: translateX(0.2rem);
+}
+
+.secondary {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin: 1.5rem 0 0;
   padding: 0;
-  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
-li {
-  margin-bottom: 0.5rem;
-  font-family: 'Roboto Condensed', monospace;
-  font-weight: 400;
-  font-size: 1.125rem;
-  color: #010101;
+.secondary a:hover {
+  color: var(--accent);
+}
+
+.footer-row {
+  margin-top: clamp(3rem, 8vw, 5rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
 }
 </style>

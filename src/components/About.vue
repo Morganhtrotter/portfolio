@@ -1,82 +1,149 @@
 <template>
-  <section id="about">
-    <h1>About Me</h1>
-    <p>
-      I am a Front End Web Developer with over 4 years of professional experience building
-      user-focused web applications. My expertise includes Vue.js, JavaScript, D3.js, HTML5, CSS3,
-      and modern development tooling such as Vite, Webpack, and Node.js. I specialize in creating
-      intuitive, accessible, and responsive interfaces that deliver seamless user experiences.
-    </p>
-    <p class="line-break">
-      I am especially passionate about data visualization, combining algorithmic problem-solving
-      with creative design to transform complex datasets into engaging, interactive visuals. I enjoy
-      working at the intersection of technical programming and design, with a focus on clarity,
-      usability, and accessibility.
-    </p>
-    <h3>Professional Experience</h3>
-    <div class="experience-header-wrapper">
-      <h4>Williams Sonoma - Front End Web Developer</h4>
-      <h5>April 2021 - Present</h5>
+  <section
+    id="about"
+    class="section about"
+  >
+    <div class="about-head">
+      <h2>About</h2>
     </div>
-    <p>
-      At Williams Sonoma, I contribute to a large-scale e-commerce platform, collaborating daily
-      with creative teams, UI/UX designers, site management, product managers, and back end
-      engineers. My work centers on implementing scalable CSS solutions that deliver consistent and
-      responsive designs across multiple brands and devices. I also apply vanilla JavaScript through
-      the company's CMS to extend functionality and improve user interactions. This role strengthens
-      my ability to work cross-functionally in a fast-paced environment while ensuring quality,
-      accessibility, and brand consistency.
-    </p>
-    <div class="experience-header-wrapper">
-      <h4>Turner Engineering - Front End Web Developer and Data Engineer</h4>
-      <h5>April 2025 - Present</h5>
+
+    <div class="about-body">
+      <div class="copy">
+        <p>
+          I'm a front-end developer based in San Francisco, working at the intersection of
+          production UI and data visualization — I like the problems that only show up once real
+          data hits a real interface.
+        </p>
+        <p>Outside of work I'm usually playing baseball, cooking, or out with my dog, Moose.</p>
+      </div>
+
+      <ul class="experience">
+        <li
+          v-for="job in experience"
+          :key="job.company"
+        >
+          <div class="dates">
+            {{ job.dates }}
+          </div>
+          <div class="role-line">
+            <span class="company">{{ job.company }}</span>
+            <span class="title">{{ job.title }}</span>
+          </div>
+          <p class="summary">
+            {{ job.summary }}
+          </p>
+        </li>
+      </ul>
     </div>
-    <p class="line-break">
-      At Turner Engineering, I design and develop Vue 3 and Vite applications featuring
-      D3.js-powered data visualizations that model time savings from synchronizing traffic signals
-      with SF Metro vehicles. I engineer a data pipeline that collects real-time traffic data from
-      511.org SF Bay, then process and curate datasets into structured JSON files using custom
-      JavaScript algorithms. To improve deployment efficiency, I implement a CI/CD pipeline with
-      GitHub Actions, enabling automated testing, build optimization, and production deployment of
-      Vue + D3 applications. This work combines front end architecture, data engineering, and
-      workflow automation to deliver scalable, data-driven web solutions.
-    </p>
-    <h3>Beyond Work</h3>
-    <p>
-      I am based in San Francisco, CA, and I am always eager to explore new frameworks, libraries,
-      and design patterns. Outside of coding, I enjoy playing baseball, cooking, and spending time
-      with my dog, Moose.
-    </p>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const experience = [
+  {
+    company: 'Turner Engineering',
+    title: 'Front-End Developer & Data Engineer',
+    dates: 'Apr 2025 — Present',
+    summary:
+      'Vue 3 + D3.js applications modeling time savings from signal-synchronization; built the 511.org polling pipeline and GitHub Actions CI/CD behind it.',
+  },
+  {
+    company: 'Williams Sonoma',
+    title: 'Front-End Web Developer',
+    dates: 'Apr 2021 — Present',
+    summary:
+      'Scalable CSS and vanilla JS across a multi-brand e-commerce platform, working daily with design, product, and back-end engineering.',
+  },
+]
+</script>
 
 <style scoped>
-section {
-  margin-bottom: 2em;
+.about {
+  border-top: 1px solid var(--line);
+  padding-top: clamp(2rem, 5vw, 3rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
-h3 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #010101;
-  font-family: 'Roboto Condensed', monospace;
+.about-head {
+  margin-bottom: 2rem;
 }
 
-h4,
-h5 {
-  color: #010101;
-  font-family: 'Roboto Condensed', monospace;
-  font-size: 1.25rem;
-  margin: 8px 0 4px;
+.about-head h2 {
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
 }
 
-.experience-header-wrapper {
+.about-body {
+  display: grid;
+  grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+  gap: 3rem;
+}
+
+.copy {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.copy p {
+  margin: 0;
+}
+
+.experience {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.experience li {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.dates {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.role-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.company {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.summary {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 0;
+}
+
+@media (max-width: 46rem) {
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 </style>

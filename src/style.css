@@ -1,181 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Megrim&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import './styles/tokens.css';
 
-:root {
-  --bg-lqip: url('./assets/background-lqip.jpg');
-  --bg-full: url('./assets/image0.png');
-  --bg-size: cover;
-  --bg-position: center;
-  --bg-repeat: no-repeat;
+* {
+  box-sizing: border-box;
+}
 
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #f3f6f8;
-  background-image: var(--bg-lqip);
-  background-size: var(--bg-size);
-  background-position: var(--bg-position);
-  background-repeat: var(--bg-repeat);
-  background-attachment: fixed;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root.loaded {
-  background-image: var(--bg-full);
+img,
+svg {
+  max-width: 100%;
+  display: block;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  color: inherit;
+  text-decoration: none;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  font-family: 'Big Shoulders', monospace;
-  text-transform: uppercase;
-  font-size: 4.25rem;
-  font-weight: 200;
-}
-
-h2 {
-  font-family: 'Roboto Condensed', monospace;
-  font-weight: 400;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
   margin: 0;
-  color: #010101;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 90rem;
-  width: 100%;
-  height: calc(100vh - 4rem);
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.header-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: left;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.material-symbols-outlined {
-  color: #010101;
-}
-
-.material-symbols-outlined.open {
-  transform: rotate(180deg);
-}
-
-.next-page-wrapper {
-  margin: auto 0 auto auto;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-right: 1rem;
+  color: var(--ink);
+  text-wrap: balance;
 }
 
 p {
-  color: #010101;
-  font-family: 'Roboto Condensed', monospace;
-  font-weight: 400;
-  font-size: 1.125rem;
-  text-align: left;
+  margin: 0;
 }
 
-.line-break {
-  padding-bottom: 1.5rem;
-  border-bottom: 1.5px solid #010101;
+button {
+  font-family: inherit;
+  cursor: pointer;
 }
 
-/* Desktop only */
-@media screen and (min-width: 48rem) {
-  .material-symbols-outlined:hover {
-    color: #646cff;
-    cursor: pointer;
-  }
+#app {
+  width: 100%;
 }
 
-/* Mobile only */
-@media screen and (max-width: 48rem) {
-  #app {
-    padding: 1rem;
-    height: calc(100vh - 2rem);
-  }
-
-  .header-wrapper {
-    padding: 1rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    text-align: left;
-  }
-
-  h2 {
-    font-size: 1rem;
-  }
+.section {
+  max-width: var(--col-max);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-    background-image: url('./assets/mobileBackground.png');
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#hero,
+#work,
+#about,
+#contact {
+  scroll-margin-top: 4.5rem;
 }
