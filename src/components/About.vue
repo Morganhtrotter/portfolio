@@ -59,12 +59,13 @@ const experience = [
 
 <style scoped>
 .about {
-  border-top: 1px solid var(--line);
   padding-top: clamp(2rem, 5vw, 3rem);
   padding-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
 .about-head {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
   margin-bottom: 2rem;
 }
 

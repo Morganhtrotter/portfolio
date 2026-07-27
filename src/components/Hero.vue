@@ -7,12 +7,12 @@
       Available for select freelance &amp; full-time roles
     </p>
 
-    <h1>Front-end engineer,<br>built for data.</h1>
+    <h1>Front-End Web Developer,<br>Data Visualization Specialist.</h1>
 
     <div class="hero-body">
       <div class="hero-primary">
         <p class="role">
-          Front-End Developer &amp; Data Visualization Specialist
+          Front-End Engineer &amp; Rapid Experimentation Programmer
         </p>
         <p class="proof">
           5+ years shipping production UI for Williams Sonoma and building D3.js transit-data

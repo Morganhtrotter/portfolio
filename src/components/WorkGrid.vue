@@ -101,15 +101,16 @@ const projects = [
 
 <style scoped>
 .work {
-  border-top: 1px solid var(--line);
   padding-top: clamp(2rem, 5vw, 3rem);
   padding-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
 .work-head {
+  border-top: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 

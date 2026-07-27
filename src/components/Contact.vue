@@ -47,12 +47,13 @@
 
 <style scoped>
 .contact {
-  border-top: 1px solid var(--line);
   padding-top: clamp(2rem, 5vw, 3rem);
   padding-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 .contact-head {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
   margin-bottom: 2rem;
 }
 
@@ -71,11 +72,14 @@
 
 .primary-cta {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
+  max-width: 100%;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
+  overflow-wrap: anywhere;
   color: var(--ink);
   padding-bottom: 0.3rem;
   border-bottom: 2px solid var(--accent);

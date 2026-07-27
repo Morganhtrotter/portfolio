@@ -33,7 +33,18 @@
 const groups = [
   {
     label: 'Frontend',
-    skills: ['Vue 3', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Responsive & Accessible UI'],
+    skills: [
+      'JavaScript (ES6+)',
+      'Vue 3',
+      'CSS3',
+      'React',
+      'HTML5',
+      'Rapid Experimentation',
+      'A/B Tests',
+      'Tailwind CSS',
+      'Design System',
+      'Responsive & Accessible UI',
+    ],
   },
   {
     label: 'Data Visualization',
@@ -41,22 +52,35 @@ const groups = [
   },
   {
     label: 'Tooling & Workflow',
-    skills: ['Vite', 'Webpack', 'Node.js', 'Git & GitHub', 'GitHub Actions CI/CD'],
+    skills: [
+      'Vite',
+      'Webpack',
+      'Node.js',
+      'Git & GitHub',
+      'ESLint',
+      'Prettier',
+      'Custom BASH Scripts',
+      'Adobe Target',
+      'Adobe Experience Manager',
+      'Jenkins',
+      'GitHub Actions CI/CD',
+    ],
   },
 ]
 </script>
 
 <style scoped>
 .capabilities {
-  border-top: 1px solid var(--line);
   padding-top: clamp(2rem, 5vw, 3rem);
   padding-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
 .cap-head {
+  border-top: 1px solid var(--line);
   display: grid;
   grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
   gap: 2rem;
+  padding-top: 1.5rem;
   margin-bottom: 2rem;
 }
 
