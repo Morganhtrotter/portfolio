@@ -41,18 +41,18 @@
 <script setup>
 const experience = [
   {
-    company: 'Turner Engineering',
-    title: 'Front-End Developer & Data Engineer',
-    dates: 'Apr 2025 — Present',
-    summary:
-      'Vue 3 + D3.js applications modeling time savings from signal-synchronization; built the 511.org polling pipeline and GitHub Actions CI/CD behind it.',
-  },
-  {
     company: 'Williams Sonoma',
     title: 'Front-End Web Developer',
     dates: 'Apr 2021 — Present',
     summary:
       'Scalable CSS and vanilla JS across a multi-brand e-commerce platform, working daily with design, product, and back-end engineering.',
+  },
+  {
+    company: 'Turner Engineering',
+    title: 'Front-End Developer & Data Engineer',
+    dates: 'Apr 2025 — Dec 2025',
+    summary:
+      'Vue 3 + D3.js applications modeling time savings from signal-synchronization; built the 511.org polling pipeline and GitHub Actions CI/CD behind it.',
   },
 ]
 </script>

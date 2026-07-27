@@ -15,7 +15,7 @@
           Front-End Developer &amp; Data Visualization Specialist
         </p>
         <p class="proof">
-          4+ years shipping production UI for Williams Sonoma and building D3.js transit-data
+          5+ years shipping production UI for Williams Sonoma and building D3.js transit-data
           pipelines at Turner Engineering — turning raw signal and GPS data into interfaces people
           can actually read.
         </p>
@@ -40,7 +40,7 @@
       <dl class="stat-col">
         <div>
           <dt>Years in production FE</dt>
-          <dd>4+</dd>
+          <dd>5+</dd>
         </div>
         <div>
           <dt>D3.js data pipelines shipped</dt>
@@ -54,9 +54,9 @@
     </div>
 
     <ul class="credibility">
-      <li><span>Now</span> Turner Engineering, Front-End &amp; Data Eng.</li>
-      <li><span>Prior</span> Williams Sonoma, Front-End Web Developer</li>
-      <li><span>Stack</span> Vue 3 &middot; D3.js &middot; Vite</li>
+      <li><span>Now</span> Williams Sonoma, Front-End Web Developer</li>
+      <li><span>Prior</span> Turner Engineering, Front-End &amp; Data Eng.</li>
+      <li><span>Stack</span> JavaScript &middot; D3.js &middot; CSS &middot; Vue 3</li>
       <li><span>Based</span> San Francisco, CA</li>
     </ul>
   </section>
@@ -147,16 +147,16 @@ h1 {
 
 .btn.primary {
   background: var(--accent);
-  color: var(--accent-ink);
+  color: var(--surface);
 }
 
 .btn.secondary {
-  border: 1px solid var(--line);
-  color: var(--ink);
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
 .btn.ghost {
-  color: var(--muted);
+  color: var(--accent);
 }
 
 .stat-col {

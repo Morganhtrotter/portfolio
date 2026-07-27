@@ -20,32 +20,34 @@
         >
           <span class="mark">{{ project.mark }}</span>
         </div>
-        <p class="kicker">
-          {{ project.kicker }}
-        </p>
-        <h3>{{ project.headline }}</h3>
-        <p class="outcome">
-          {{ project.outcome }}
-        </p>
-        <ul class="tags">
-          <li
-            v-for="tag in project.tags"
-            :key="tag"
-          >
-            {{ tag }}
-          </li>
-        </ul>
-        <div class="links">
-          <a
-            :href="project.demoUrl"
-            target="_blank"
-            rel="noopener"
-          >View project</a>
-          <a
-            :href="project.repoUrl"
-            target="_blank"
-            rel="noopener"
-          >GitHub</a>
+        <div class="card-body">
+          <p class="kicker">
+            {{ project.kicker }}
+          </p>
+          <h3>{{ project.headline }}</h3>
+          <p class="outcome">
+            {{ project.outcome }}
+          </p>
+          <ul class="tags">
+            <li
+              v-for="tag in project.tags"
+              :key="tag"
+            >
+              {{ tag }}
+            </li>
+          </ul>
+          <div class="links">
+            <a
+              :href="project.demoUrl"
+              target="_blank"
+              rel="noopener"
+            >View project</a>
+            <a
+              :href="project.repoUrl"
+              target="_blank"
+              rel="noopener"
+            >GitHub</a>
+          </div>
         </div>
       </article>
     </div>
@@ -55,6 +57,7 @@
 <script setup>
 import kLineImage from '../assets/K_Line_Inbound.png'
 import co2Image from '../assets/CO2_visual.png'
+import climateImage from '../assets/climate-change-world-map.png'
 
 const projects = [
   {
@@ -80,6 +83,18 @@ const projects = [
     tags: ['D3.js', 'Express', 'SVG'],
     demoUrl: 'https://morganhtrotter.github.io/co2page/',
     repoUrl: 'https://github.com/Morganhtrotter/co2page',
+  },
+  {
+    title: 'climate-change',
+    mark: 'GHG · WORLD MAP',
+    image: climateImage,
+    kicker: 'Personal Project',
+    headline: 'Turned a global emissions dataset into a year-by-year, gas-by-gas map',
+    outcome:
+      'Choropleth of national greenhouse-gas emissions from PRIMAP-hist (Kyoto basket, AR5 GWP100) — animated year slider, per-gas breakdown on hover, plus live continent and top-5 country rankings.',
+    tags: ['D3.js', 'GeoJSON', 'SVG'],
+    demoUrl: 'https://morganhtrotter.github.io/climate-change/',
+    repoUrl: 'https://github.com/Morganhtrotter/climate-change',
   },
 ]
 </script>
@@ -128,6 +143,40 @@ const projects = [
   gap: 0.9rem;
 }
 
+.work-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1.75rem;
+}
+
+.work-card:last-child:nth-child(odd) .thumb {
+  flex: 0 0 20rem;
+  height: auto;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.work-card:last-child:nth-child(odd) .card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 46rem) {
+  .work-card:last-child:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .work-card:last-child:nth-child(odd) .thumb {
+    flex: none;
+    height: 9rem;
+  }
+}
+
 .thumb {
   height: 9rem;
   border-radius: var(--radius);
@@ -140,15 +189,14 @@ const projects = [
 
 .thumb .mark {
   position: absolute;
-  bottom: 0.6rem;
+  top: 0.6rem;
   left: 0.7rem;
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--muted);
-  background: var(--surface);
+  color: var(--surface);
+  background: var(--accent);
   padding: 0.1rem 0.4rem;
   border-radius: 2px;
-  border: 1px solid var(--line);
 }
 
 .kicker {
@@ -183,6 +231,7 @@ const projects = [
   gap: 0.4rem;
   margin: auto 0 0;
   padding-top: 0.4rem;
+  padding-left: 0;
 }
 
 .tags li {
