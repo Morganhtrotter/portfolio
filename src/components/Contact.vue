@@ -38,8 +38,10 @@
     </ul>
 
     <div class="footer-row">
-      <span>Morgan Trotter — San Francisco, CA</span>
-      <span>Vue 3 + Vite</span>
+      <div class="footer-inner">
+        <span>Morgan Trotter — San Francisco, CA</span>
+        <span>Vue 3 + Vite</span>
+      </div>
     </div>
   </section>
 </template>
@@ -49,7 +51,6 @@
 <style scoped>
 .contact {
     padding-top: clamp(2rem, 5vw, 3rem);
-    padding-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 .contact-head {
@@ -113,14 +114,23 @@
 
 .footer-row {
     margin-top: clamp(3rem, 8vw, 5rem);
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--line);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.footer-inner {
+    max-width: var(--col-max);
+    margin: 0 auto;
+    padding: clamp(1.75rem, 4vw, 2.5rem) var(--gutter);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 0.5rem;
     font-family: var(--font-mono);
     font-size: 0.72rem;
-    color: var(--muted);
 }
 </style>
