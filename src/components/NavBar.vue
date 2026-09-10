@@ -73,126 +73,126 @@ const isOpen = ref(false)
 
 <style scoped>
 .nav-outer {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: var(--paper);
-  border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 1.1rem;
-  padding-bottom: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
 }
 
 .name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--ink);
 }
 
 .links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1.75rem;
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
 }
 
 .links a:hover {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 .resume {
-  border: 1px solid var(--ink);
-  border-radius: var(--radius);
-  padding: 0.4rem 0.9rem;
-  color: var(--ink);
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    padding: 0.4rem 0.9rem;
+    color: var(--ink);
 }
 
 .resume:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .toggle {
-  display: none;
-  width: 2rem;
-  height: 2rem;
-  background: none;
-  border: none;
-  padding: 0;
-  position: relative;
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
 }
 
 .toggle span,
 .toggle span::before,
 .toggle span::after {
-  content: '';
-  position: absolute;
-  left: 0.35rem;
-  right: 0.35rem;
-  height: 1.5px;
-  background: var(--ink);
-  transition: transform 0.2s ease;
+    content: '';
+    position: absolute;
+    left: 0.35rem;
+    right: 0.35rem;
+    height: 1.5px;
+    background: var(--ink);
+    transition: transform 0.2s ease;
 }
 
 .toggle span {
-  top: 50%;
+    top: 50%;
 }
 
 .toggle span::before {
-  top: -0.4rem;
+    top: -0.4rem;
 }
 
 .toggle span::after {
-  top: 0.4rem;
+    top: 0.4rem;
 }
 
 .toggle span.open {
-  background: transparent;
+    background: transparent;
 }
 
 .toggle span.open::before {
-  top: 0;
-  transform: rotate(45deg);
+    top: 0;
+    transform: rotate(45deg);
 }
 
 .toggle span.open::after {
-  top: 0;
-  transform: rotate(-45deg);
+    top: 0;
+    transform: rotate(-45deg);
 }
 
 .flyout {
-  list-style: none;
-  margin: 0;
-  padding: 0 var(--gutter) 1.25rem;
-  display: none;
-  flex-direction: column;
-  gap: 0.9rem;
-  font-family: var(--font-mono);
-  font-size: 0.92rem;
-  border-bottom: 1px solid var(--line);
+    list-style: none;
+    margin: 0;
+    padding: 0 var(--gutter) 1.25rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.92rem;
+    border-bottom: 1px solid var(--line);
 }
 
 @media (max-width: 42rem) {
-  .links {
-    display: none;
-  }
+    .links {
+        display: none;
+    }
 
-  .toggle {
-    display: block;
-  }
+    .toggle {
+        display: block;
+    }
 
-  .flyout {
-    display: flex;
-  }
+    .flyout {
+        display: flex;
+    }
 }
 </style>

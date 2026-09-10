@@ -6,7 +6,8 @@
     <div class="contact-head">
       <h2>Contact</h2>
       <p class="intro">
-        Open to freelance, contract, and full-time front-end roles — especially ones involving data.
+        Open to freelance, contract, and full-time front-end roles — especially ones
+        involving data.
       </p>
     </div>
 
@@ -47,79 +48,79 @@
 
 <style scoped>
 .contact {
-  padding-top: clamp(2rem, 5vw, 3rem);
-  padding-bottom: clamp(2rem, 5vw, 3rem);
+    padding-top: clamp(2rem, 5vw, 3rem);
+    padding-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 .contact-head {
-  border-top: 1px solid var(--line);
-  padding-top: 1.5rem;
-  margin-bottom: 2rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .contact-head h2 {
-  font-weight: 700;
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 700;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
 }
 
 .contact-head .intro {
-  font-family: var(--font-body);
-  color: var(--muted);
-  font-size: 0.98rem;
-  max-width: 46ch;
-  margin-top: 0.6rem;
+    font-family: var(--font-body);
+    color: var(--muted);
+    font-size: 0.98rem;
+    max-width: 46ch;
+    margin-top: 0.6rem;
 }
 
 .primary-cta {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
-  max-width: 100%;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  overflow-wrap: anywhere;
-  color: var(--ink);
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--accent);
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 100%;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    overflow-wrap: anywhere;
+    color: var(--ink);
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
 }
 
 .primary-cta span {
-  color: var(--accent);
-  transition: transform 0.15s ease;
+    color: var(--accent);
+    transition: transform 0.15s ease;
 }
 
 .primary-cta:hover span {
-  transform: translateX(0.2rem);
+    transform: translateX(0.2rem);
 }
 
 .secondary {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
-  margin: 1.5rem 0 0;
-  padding: 0;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--muted);
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--muted);
 }
 
 .secondary a:hover {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 .footer-row {
-  margin-top: clamp(3rem, 8vw, 5rem);
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--muted);
+    margin-top: clamp(3rem, 8vw, 5rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--muted);
 }
 </style>

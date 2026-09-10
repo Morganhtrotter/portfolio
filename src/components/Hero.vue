@@ -15,9 +15,9 @@
           Front-End Engineer &amp; Rapid Experimentation Programmer
         </p>
         <p class="proof">
-          5+ years shipping production UI for Williams Sonoma and building D3.js transit-data
-          pipelines at Turner Engineering — turning raw signal and GPS data into interfaces people
-          can actually read.
+          5+ years shipping production UI for Williams Sonoma and building D3.js
+          transit-data pipelines at Turner Engineering — turning raw signal and GPS data
+          into interfaces people can actually read.
         </p>
         <div class="ctas">
           <a
@@ -66,155 +66,155 @@
 
 <style scoped>
 .hero {
-  padding-top: clamp(2.5rem, 6vw, 4rem);
+    padding-top: clamp(2.5rem, 6vw, 4rem);
 }
 
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  gap: 0.6em;
-  margin: 0 0 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    margin: 0 0 1rem;
 }
 
 .eyebrow::before {
-  content: '';
-  width: 0.6em;
-  height: 0.6em;
-  border-radius: 50%;
-  background: var(--accent);
-  flex: none;
+    content: '';
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 50%;
+    background: var(--accent);
+    flex: none;
 }
 
 h1 {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 0.98;
-  letter-spacing: -0.015em;
-  text-wrap: balance;
-  margin: 0;
-  color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0;
+    color: var(--ink);
 }
 
 .hero-body {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 16rem;
-  gap: 3rem;
-  align-items: end;
-  padding: 1.75rem 0 clamp(2rem, 6vw, 3.5rem);
-  border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 16rem;
+    gap: 3rem;
+    align-items: end;
+    padding: 1.75rem 0 clamp(2rem, 6vw, 3.5rem);
+    border-bottom: 1px solid var(--line);
 }
 
 .role {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  color: var(--muted);
-  margin: 0 0 0.6rem;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--muted);
+    margin: 0 0 0.6rem;
 }
 
 .proof {
-  font-family: var(--font-body);
-  font-size: 1.02rem;
-  max-width: 46ch;
-  color: var(--ink);
-  margin: 0;
+    font-family: var(--font-body);
+    font-size: 1.02rem;
+    max-width: 46ch;
+    color: var(--ink);
+    margin: 0;
 }
 
 .ctas {
-  margin-top: 1.75rem;
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+    margin-top: 1.75rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .btn {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.92rem;
-  padding: 0.7rem 1.15rem;
-  border-radius: var(--radius);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0.7rem 1.15rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .btn.primary {
-  background: var(--accent);
-  color: var(--surface);
+    background: var(--accent);
+    color: var(--surface);
 }
 
 .btn.secondary {
-  border: 1px solid var(--accent);
-  color: var(--accent);
+    border: 1px solid var(--accent);
+    color: var(--accent);
 }
 
 .btn.ghost {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 .stat-col {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--muted);
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  text-align: right;
-  margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    text-align: right;
+    margin: 0;
 }
 
 .stat-col > div {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 0.1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.1rem;
 }
 
 .stat-col dd {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.6rem;
-  color: var(--ink);
-  margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--ink);
+    margin: 0;
 }
 
 .stat-col dt {
-  margin: 0;
+    margin: 0;
 }
 
 .credibility {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 2.5rem;
-  padding: 1.5rem 0;
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--muted);
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2.5rem;
+    padding: 1.5rem 0;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--muted);
 }
 
 .credibility span {
-  color: var(--ink);
-  font-weight: 500;
-  margin-right: 0.4em;
+    color: var(--ink);
+    font-weight: 500;
+    margin-right: 0.4em;
 }
 
 @media (max-width: 42rem) {
-  .hero-body {
-    grid-template-columns: 1fr;
-  }
+    .hero-body {
+        grid-template-columns: 1fr;
+    }
 
-  .stat-col {
-    flex-direction: row;
-    text-align: left;
-    gap: 1.5rem;
-  }
+    .stat-col {
+        flex-direction: row;
+        text-align: left;
+        gap: 1.5rem;
+    }
 }
 </style>

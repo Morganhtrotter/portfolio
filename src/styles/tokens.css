@@ -3,31 +3,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500..800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --ink: #433a3f;
-  --muted: #433a3f;
-  --paper: #e5e7e6;
-  --surface: #f5f5f5;
-  --line: #a0a1a1;
-  --accent: #e03616;
-  --accent-ink: #16130f;
+    --ink: #433a3f;
+    --muted: #433a3f;
+    --paper: #e5e7e6;
+    --surface: #f5f5f5;
+    --line: #a0a1a1;
+    --accent: #e03616;
+    --accent-ink: #16130f;
 
-  --font-display: 'Bricolage Grotesque', 'Arial Black', sans-serif;
-  --font-body: 'Instrument Sans', -apple-system, sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --font-display: 'Bricolage Grotesque', 'Arial Black', sans-serif;
+    --font-body: 'Instrument Sans', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-  --radius: 3px;
-  --col-max: 74rem;
-  --gutter: clamp(1.25rem, 4vw, 3rem);
+    --radius: 3px;
+    --col-max: 74rem;
+    --gutter: clamp(1.25rem, 4vw, 3rem);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #edeef0;
-    --paper: #0c0e11;
-    --surface: #15181c;
-    --line: #272b2f;
-    --accent: #ff7a42;
-    --accent-ink: #16130f;
-    --muted: #90959b;
-  }
+    :root {
+        --ink: #edeef0;
+        --paper: #0c0e11;
+        --surface: #15181c;
+        --line: #272b2f;
+        --accent: #ff7a42;
+        --accent-ink: #16130f;
+        --muted: #90959b;
+    }
 }
